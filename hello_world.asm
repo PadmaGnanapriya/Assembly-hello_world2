@@ -9,12 +9,12 @@ start:
 
     mov si, hello_world
     call print_string
-    hello_world db 'Hello World', 13.0
+    hello_world db 'Hello World',13,0
 
-;define function here
+
 
 print_string:
-    movah, 0x0E
+    mov ah, 0x0E
 
 .repeat_next_char:
     lodsb
@@ -26,5 +26,5 @@ print_string:
 .done_print:
     ret 
 
-times(510 -($ $$)) db 0x00
+times (510 -($ - $$)) db 0x00
 dw 0xAA55
