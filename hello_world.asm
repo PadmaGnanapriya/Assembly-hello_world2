@@ -9,7 +9,7 @@ start:
 
     mov si, hello_world
     call print_string
-    hello_world db 'Hello World',13,0
+    hello_world db 'Hello World 2',15,0
 
 
 
